@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.bottom-controls {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #667eea;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #5563c1;
+}
+
+/* Sudoku Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 45px);
+  justify-content: center;
+}
+
+/* Cells */
+.cell {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #888;
+  outline: none;
+}
+
+/* Thick 3x3 borders */
+.cell:nth-child(3n) {
+  border-right: 3px solid black;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 3px solid black;
+}
+
+/* Prefilled cells */
+.prefilled {
+  background: #eee;
+  font-weight: bold;
+}
+
+.wrong {
+  background-color: #ffcccc;
+}
